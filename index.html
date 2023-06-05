@@ -11,11 +11,17 @@
 
     /* Estilo dos cards */
     .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 300px;
-      border: 1px solid #ccc;
+      height: 300px;
       border-radius: 8px;
-      padding: 10px;
-      margin-bottom: 20px;
+      background-color: red;
+      color: black;
+      padding: 20px;
+      margin: 20px;
     }
 
     /* Estilo do input */
@@ -27,41 +33,24 @@
 
     /* Estilo do botão */
     .card button {
-      background-color: #4CAF50;
+      background-color: black;
       color: white;
       border: none;
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
-      display: inline-block;
       font-size: 16px;
-      margin-top: 10px;
       cursor: pointer;
     }
 
     /* Estilo do feedback de resposta correta */
     .card .feedback {
-      color: green;
       font-weight: bold;
       margin-top: 10px;
     }
 
-    /* Estilos específicos de cada card */
-    #card1 {
-      background-color: #F5F5F5;
-    }
-
-    #card2 {
-      background-color: #E0E0E0;
-    }
-
-    #card3 {
-      background-color: #D3D3D3;
-    }
-
     /* Estilo da classe .karma */
     .karma {
-      color: red;
       font-weight: 800;
       background-color: white;
       font-family: 'Comic Sans MS', cursive;
@@ -103,4 +92,13 @@
       const feedback = card.querySelector('.feedback');
 
       button.addEventListener('click', () => {
-        const resposta = input.value
+        const resposta = input.value;
+        // Lógica para verificar a resposta
+        // ...
+        // Exibir feedback corretamente
+        feedback.textContent = 'Resposta correta!';
+      });
+    });
+  </script>
+</body>
+</html>
