@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exposição de Fotos</title>
+  <style>
+    /* Estilo global */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilo dos cards */
+    .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Estilo do input */
+    .card input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Estilo do botão */
+    .card button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    /* Estilo do feedback de resposta correta */
+    .card .feedback {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Estilos específicos de cada card */
+    #card1 {
+      background-color: #F5F5F5;
+    }
+
+    #card2 {
+      background-color: #E0E0E0;
+    }
+
+    #card3 {
+      background-color: #D3D3D3;
+    }
+
+    /* Estilo da classe .karma */
+    .karma {
+      color: red;
+      font-weight: 800;
+      background-color: white;
+      font-family: 'Comic Sans MS', cursive;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card1">
+    <h2>Card 1</h2>
+    <img src="imagem1.jpg" alt="Imagem 1">
+    <input type="text" placeholder="Digite sua resposta">
+    <button>Verificar</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="card" id="card2">
+    <h2>Card 2</h2>
+    <img src="imagem2.jpg" alt="Imagem 2">
+    <input type="text" placeholder="Digite sua resposta">
+    <button>Verificar</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="card" id="card3">
+    <h2>Card 3</h2>
+    <img src="imagem3.jpg" alt="Imagem 3">
+    <input type="text" placeholder="Digite sua resposta">
+    <button>Verificar</button>
+    <div class="feedback"></div>
+  </div>
+
+  <script>
+    // Código JavaScript para verificar as respostas e fornecer feedback
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      const input = card.querySelector('input');
+      const button = card.querySelector('button');
+      const feedback = card.querySelector('.feedback');
+
+      button.addEventListener('click', () => {
+        const resposta = input.value;
+        // Lógica para verificar a resposta
+        // ...
+        // Exibir feedback corretamente
+        feedback.textContent = 'Resposta correta!';
+        feedback.style.color = 'green';
+      });
+    });
+  </script
