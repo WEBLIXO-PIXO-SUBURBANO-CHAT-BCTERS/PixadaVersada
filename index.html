@@ -60,25 +60,9 @@
 <body>
   <div class="card" id="card1">
     <h2>Card 1</h2>
-    <img src="imagem1.jpg" alt="Imagem 1">
+    <img src="mafloca/pcpvidros.png" alt="pcpvidros">
     <input type="text" placeholder="Digite sua resposta">
-    <button>Verificar</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="card" id="card2">
-    <h2>Card 2</h2>
-    <img src="imagem2.jpg" alt="Imagem 2">
-    <input type="text" placeholder="Digite sua resposta">
-    <button>Verificar</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="card" id="card3">
-    <h2>Card 3</h2>
-    <img src="imagem3.jpg" alt="Imagem 3">
-    <input type="text" placeholder="Digite sua resposta">
-    <button>Verificar</button>
+    <button onClick="verifyWord('pcpvidros','pixo1')">Verificar</button>
     <div class="feedback"></div>
   </div>
 
@@ -99,6 +83,11 @@
         feedback.textContent = 'Resposta correta!';
       });
     });
+                         
+      function verifyWord(awnser,id){
+        // Criar a verificação do pixo
+
+}
   </script>
 </body>
 </html>
